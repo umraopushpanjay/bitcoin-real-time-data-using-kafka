@@ -5,3 +5,10 @@ CREATE TABLE IF NOT EXISTS five_min_bitcoin_event (
     min_value DOUBLE PRECISION,
     max_value DOUBLE PRECISION
 );
+
+CREATE TABLE IF NOT EXISTS pipeline_metrics (
+    metric_timestamp TIMESTAMP PRIMARY KEY,
+    events_processed INT NOT NULL,
+    processing_lag_seconds DOUBLE PRECISION,
+    data_size_kb DOUBLE PRECISION
+);

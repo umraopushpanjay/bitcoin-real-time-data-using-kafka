@@ -1,0 +1,22 @@
+apiVersion: 1
+
+contactPoints:
+  - orgId: 1
+    name: default-email
+    receivers:
+      - uid: default-email-receiver
+        type: email
+        settings:
+          addresses: grace.cako@lotto24.com
+          singleEmail: true
+        disableResolveMessage: false
+
+  - orgId: 1
+    name: console-logger
+    receivers:
+      - uid: console-logger-receiver
+        type: webhook
+        settings:
+          url: http://localhost:9090/webhook
+          httpMethod: POST
+        disableResolveMessage: false
