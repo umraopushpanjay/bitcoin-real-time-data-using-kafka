@@ -70,7 +70,6 @@ if __name__ == '__main__':
         
         for msg in consumer:
             event = msg.value
-            time.sleep(30)
             ts = datetime.fromisoformat(event['timestamp'])
             five_min_start = make_five_min_start(ts)
             buffer[five_min_start].append(event['price'])
