@@ -7,7 +7,7 @@ contactPoints:
       - uid: default-email-receiver
         type: email
         settings:
-          addresses: grace.cako@lotto24.com
+          addresses: umraopushpanjay@gmail.com
           singleEmail: true
         disableResolveMessage: false
 

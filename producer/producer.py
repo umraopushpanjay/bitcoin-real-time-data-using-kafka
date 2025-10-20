@@ -12,7 +12,14 @@ producer = KafkaProducer(
 topic = 'btc_price'
 
 def get_realtime_price():
-    """Fetch live Bitcoin price from Binance API"""
+    """
+    Fetch live Bitcoin price from Binance public API.
+    Returns:
+        dict: A structured event containing:
+            - symbol (str): Trading pair identifier
+            - price (float): Current Bitcoin price in USD
+            - timestamp (str): ISO format timestamp when the price was fetched
+"""
     url = 'https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT'
     r = requests.get(url, timeout=5)
     data = r.json()
